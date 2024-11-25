@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/BuyScene.unity
+    path: Assets/Scenes/ShopScene.unity
     guid: e28fb9493f2393a42b33cf74e9d290b4
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
