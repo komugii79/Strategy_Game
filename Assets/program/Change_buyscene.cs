@@ -7,6 +7,6 @@ public class Change_buyscene : MonoBehaviour
 {
    public void change_button()
    {
-        SceneManager.LoadScene("BuyScene");
+        SceneManager.LoadScene("ShopScene");
    }
 }
