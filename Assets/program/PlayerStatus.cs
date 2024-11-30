@@ -6,11 +6,13 @@ public class PlayerStatus : MonoBehaviour
 {
     public Slider hpSlider;        // HPÉoÅ[
     public TextMeshProUGUI HPText; // HPÇÃêîílï\é¶
-    public int maxHP = 100;        // ç≈ëÂHP
-    public int currentHP;          // åªç›ÇÃHP
+    public int maxHP = 300;        // ç≈ëÂHP
+    public int currentHP = 100;          // åªç›ÇÃHP
+    public TextMeshProUGUI MPText;
+    public int Mp = 100;
 
     public int attackPower = 10;   // çUåÇóÕ
-    public int defensePower = 5;   // ñhå‰óÕ
+    public int defensePower = 10;   // ñhå‰óÕ
     public TextMeshProUGUI ATKText; // çUåÇóÕï\é¶
     public TextMeshProUGUI DEFText; // ñhå‰óÕï\é¶
 
@@ -25,6 +27,11 @@ public class PlayerStatus : MonoBehaviour
     {
         currentHP += amount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+        UpdateStatsUI();
+    }
+    public void AddMP(int amount)
+    {
+        Mp += amount;
         UpdateStatsUI();
     }
 
@@ -47,6 +54,7 @@ public class PlayerStatus : MonoBehaviour
     {
         hpSlider.value = (float)currentHP / maxHP;
         HPText.text = $"{currentHP}/{maxHP}";
+        MPText.text = $"{Mp}";
         ATKText.text = $"{attackPower}";
         DEFText.text = $"{defensePower}";
     }
