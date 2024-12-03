@@ -63,7 +63,9 @@
     <Compile Include="Assets\program\GameManager.cs" />
     <Compile Include="Assets\battleManeger.cs" />
     <Compile Include="Assets\program\DebugDisplay.cs" />
+    <Compile Include="Assets\program\InfoPanelController.cs" />
     <Compile Include="Assets\program\ShopManager.cs" />
+    <Compile Include="Assets\program\ItemButton.cs" />
     <Compile Include="Assets\Battler.cs" />
     <Compile Include="Assets\Commands\AttackCommandSO.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
