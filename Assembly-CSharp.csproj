@@ -59,12 +59,20 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.32f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\battleManeger.cs" />
+    <Compile Include="Assets\Battler.cs" />
+    <Compile Include="Assets\Commands\AttackCommandSO.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\program\Change_buyscene.cs" />
+    <Compile Include="Assets\program\ButtonOnClickAttack.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
+    <Compile Include="Assets\Commands\HealCommandSO.cs" />
+    <Compile Include="Assets\program\SelectableText.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
+    <Compile Include="Assets\program\ButtonOnClick.cs" />
     <Compile Include="Assets\program\Change_battlescene.cs" />
+    <Compile Include="Assets\Commands\CommandSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
