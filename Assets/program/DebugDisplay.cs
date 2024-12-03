@@ -5,17 +5,19 @@ using UnityEngine;
 
 public class DebugDisplay : MonoBehaviour
 {
-    public TextMeshProUGUI LogText;  // デバッグ内容を表示するText
+    public TextMeshProUGUI LogText;    // デバッグ内容を表示するText
     public CanvasGroup canvasGroup;    // フェード制御用のCanvasGroup
 
-    private float displayTime = 1f;    // 表示時間
+    private float displayTime = 1f;      // 表示時間
     private float fadeDuration = 0.5f;   // フェード時間
+    private float firstfadeDuration = 0f;
     private Coroutine coroutine;
 
     void Start()
     {
         // canvasを非表示にする
         canvasGroup.alpha = 0f;
+        ShowLog("アイテムを購入してください");
     }
     public void ShowLog(string msg)
     {
@@ -31,7 +33,7 @@ public class DebugDisplay : MonoBehaviour
     {
         // ログをセットしてフェードイン
         LogText.text = msg;
-        yield return StartCoroutine(FadeCanvasGroup(0f,1f,fadeDuration));  
+        yield return StartCoroutine(FadeCanvasGroup(0f,1f, firstfadeDuration));  
 
         // 指定時間表示
         yield return new WaitForSeconds(displayTime);
