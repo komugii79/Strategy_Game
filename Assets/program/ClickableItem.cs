@@ -19,8 +19,7 @@ public class ClickableItem : MonoBehaviour
     {
         if (shopManager != null)
         {
-            shopManager.PurchaseItem(itemType, amount,cost);
-            gameObject.SetActive(false);
+            shopManager.PurchaseItem(itemType, amount,cost,gameObject);
         }
         else
         {

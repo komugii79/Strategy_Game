@@ -11,16 +11,23 @@ public class ShopManager : MonoBehaviour
         //  DebugDisplayをシーンから取得
         logDisplay = FindObjectOfType<DebugDisplay>();
     }
-    public void PurchaseItem(string itemType,int amount,int cost)
+    public void PurchaseItem(string itemType,int amount,int cost,GameObject itemUI)
     {
-        if(GameManager.Instance.playerMoney >= cost)
+        if (GameManager.Instance.playerMoney >= cost)
         {
             GameManager.Instance.UpdateMoney(-cost);
-            GameManager.Instance.UpdateStatus(itemType,amount);
+            GameManager.Instance.UpdateStatus(itemType, amount);
 
             // ポップアップログを表示
             logDisplay.ShowLog($"{itemType}を{amount}Gで購入しました!");
+
+            if (itemUI != null)
+            {
+                itemUI.SetActive(false);
+
+            }
         }
+
         else
         {
             // お金が足りない場合のログを表示
