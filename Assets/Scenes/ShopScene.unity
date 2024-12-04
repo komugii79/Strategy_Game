@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 204838279}
   - component: {fileID: 204838278}
   - component: {fileID: 204838281}
+  - component: {fileID: 204838282}
   m_Layer: 0
   m_Name: Iron Sword
   m_TagString: Untagged
@@ -688,13 +689,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204838276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Iron Sword
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &204838282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204838276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Iron Sword
+  cost: 50
+  statType: "\u653B\u6483\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &205665506
@@ -1199,6 +1217,7 @@ GameObject:
   - component: {fileID: 304034696}
   - component: {fileID: 304034695}
   - component: {fileID: 304034698}
+  - component: {fileID: 304034699}
   m_Layer: 0
   m_Name: Sapphire Staff
   m_TagString: Untagged
@@ -1340,13 +1359,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304034693}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Sapphire Staff
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &304034699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304034693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Sapphire Staff
+  cost: 50
+  statType: "\u9B54\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &319594870
@@ -1881,7 +1917,6 @@ GameObject:
   - component: {fileID: 414328389}
   - component: {fileID: 414328388}
   - component: {fileID: 414328390}
-  - component: {fileID: 414328392}
   - component: {fileID: 414328391}
   m_Layer: 0
   m_Name: Golden Sword
@@ -2028,46 +2063,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414328385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Golden Sword
-  cost: 100
-  statIncrease: 120
+  cost: 120
+  statIncrease: 100
   infoPanelController: {fileID: 572833076}
---- !u!222 &414328391
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414328385}
-  m_CullTransparentMesh: 1
---- !u!223 &414328392
-Canvas:
+--- !u!114 &414328391
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414328385}
   m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Golden Sword
+  cost: 120
+  statType: "\u653B\u6483\u529B"
+  statIncrease: 100
+  infoPanelController: {fileID: 572833076}
 --- !u!1 &452212559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2581,7 @@ GameObject:
   - component: {fileID: 855659597}
   - component: {fileID: 855659596}
   - component: {fileID: 855659598}
+  - component: {fileID: 855659599}
   m_Layer: 0
   m_Name: Ruby Staff
   m_TagString: Untagged
@@ -2701,13 +2723,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855659593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Ruby Staff
   cost: 100
+  statIncrease: 120
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &855659599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855659593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Ruby Staff
+  cost: 100
+  statType: "\u9B54\u529B"
   statIncrease: 120
   infoPanelController: {fileID: 572833076}
 --- !u!1 &899292965
@@ -3764,6 +3803,7 @@ GameObject:
   - component: {fileID: 1369261810}
   - component: {fileID: 1369261809}
   - component: {fileID: 1369261812}
+  - component: {fileID: 1369261813}
   m_Layer: 0
   m_Name: Green Potion 3
   m_TagString: Untagged
@@ -3780,7 +3820,7 @@ Transform:
   m_GameObject: {fileID: 1369261807}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9345446, y: -2.9, z: 0}
+  m_LocalPosition: {x: 5.9345446, y: -3.1, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3905,13 +3945,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369261807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Green Potion
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1369261813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369261807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Green Potion
+  cost: 50
+  statType: "\u4F53\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1386744803
@@ -3981,7 +4038,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1f2c7dc6e7e190145b6dc01c7d6613e4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0e52695f657501f419803c3e445ea89c, type: 2}
   m_sharedMaterial: {fileID: -8414114675906448355, guid: 1f2c7dc6e7e190145b6dc01c7d6613e4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4006,15 +4063,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4022,7 +4079,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4045,7 +4102,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1398160067
@@ -4517,7 +4574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1672715107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,7 +4582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672715106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf29fbdd1b37ba84fb778736ff54a6fd, type: 3}
   m_Name: 
@@ -4568,6 +4625,7 @@ GameObject:
   - component: {fileID: 1738270246}
   - component: {fileID: 1738270245}
   - component: {fileID: 1738270248}
+  - component: {fileID: 1738270249}
   m_Layer: 0
   m_Name: Wooden Sword
   m_TagString: Untagged
@@ -4709,13 +4767,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738270243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Sword
   cost: 25
+  statIncrease: 30
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1738270249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738270243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wooden Sword
+  cost: 25
+  statType: "\u653B\u6483\u529B"
   statIncrease: 30
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1778479575
@@ -5228,6 +5303,7 @@ GameObject:
   - component: {fileID: 1942443576}
   - component: {fileID: 1942443575}
   - component: {fileID: 1942443578}
+  - component: {fileID: 1942443579}
   m_Layer: 0
   m_Name: Wooden Staff
   m_TagString: Untagged
@@ -5369,13 +5445,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942443573}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Staff
   cost: 25
+  statIncrease: 30
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1942443579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942443573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wooden Staff
+  cost: 25
+  statType: "\u9B54\u529B"
   statIncrease: 30
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1965801201
@@ -5391,6 +5484,7 @@ GameObject:
   - component: {fileID: 1965801205}
   - component: {fileID: 1965801204}
   - component: {fileID: 1965801206}
+  - component: {fileID: 1965801207}
   m_Layer: 0
   m_Name: Iron Shield
   m_TagString: Untagged
@@ -5459,7 +5553,7 @@ Transform:
   m_GameObject: {fileID: 1965801201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.61091, y: -3, z: 0}
+  m_LocalPosition: {x: -6.61091, y: -3.2, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5532,13 +5626,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965801201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Iron Shield
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1965801207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965801201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Iron Shield
+  cost: 50
+  statType: "\u9632\u5FA1\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1989140903
@@ -5868,6 +5979,7 @@ GameObject:
   - component: {fileID: 2031246081}
   - component: {fileID: 2031246080}
   - component: {fileID: 2031246083}
+  - component: {fileID: 2031246084}
   m_Layer: 0
   m_Name: Wooden Shield
   m_TagString: Untagged
@@ -5884,7 +5996,7 @@ Transform:
   m_GameObject: {fileID: 2031246078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0957585, y: -3.1, z: 0}
+  m_LocalPosition: {x: -0.6, y: -3.3, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6009,13 +6121,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031246078}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Shield
   cost: 25
+  statIncrease: 20
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &2031246084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031246078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wooden Shield
+  cost: 25
+  statType: "\u9632\u5FA1\u529B"
   statIncrease: 20
   infoPanelController: {fileID: 572833076}
 --- !u!1 &2086099383
@@ -6363,6 +6492,7 @@ SceneRoots:
   - {fileID: 1672715108}
   - {fileID: 1172597214}
   - {fileID: 1652176599}
+  - {fileID: 572833077}
   - {fileID: 159121727}
   - {fileID: 1129876979}
   - {fileID: 395883008}
@@ -6371,4 +6501,3 @@ SceneRoots:
   - {fileID: 1902293707}
   - {fileID: 1989140905}
   - {fileID: 146727107}
-  - {fileID: 572833077}
