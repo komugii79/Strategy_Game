@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -93,7 +94,16 @@ public class battleManeger : MonoBehaviour
 
                     // ‘I‘ğ‚³‚ê‚½‹Z‚ğİ’è
                     player.selectCommand = player.commands[playerCommandIndex];
-                    player.target = player;
+                    if(playerCommandIndex==0)
+                    {
+                        player.target = enemy;
+                    }
+                    else
+                    {
+                        player.target = player;
+                    }
+                  
+
                     enemy.selectCommand = enemy.commands[0];
                     enemy.target = player;
 
@@ -135,7 +145,7 @@ public class battleManeger : MonoBehaviour
                     break;
 
                 case Phase.End:
-                    
+
 
                     break;
             }
