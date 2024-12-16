@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class battleManeger : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class battleManeger : MonoBehaviour
 
     [SerializeField] private Slider playerHPSlider;
     [SerializeField] private Slider enemyHPSlider;
+    [SerializeField] private Slider playerMPSlider;
+
+    public TextMeshProUGUI hpText;
+    public TextMeshProUGUI mpText;
+    public TextMeshProUGUI attackText;
+    public TextMeshProUGUI defenseText;
+    public TextMeshProUGUI moneyText;
 
     private int playerCommandIndex = 0; // 技のインデックスを保持
 
@@ -28,6 +36,17 @@ public class battleManeger : MonoBehaviour
 
     void Start()
     {
+        if (GameManager.Instance != null)
+        {
+            player.hp = GameManager.Instance.hp;
+            player.mp = GameManager.Instance.mp;
+            player.attack = GameManager.Instance.attack;
+            player.defense = GameManager.Instance.defense;
+            player.money = GameManager.Instance.playerMoney;
+        }
+
+        UpdateUI();
+
         phase = Phase.StartPhase;
 
         if (playerHPSlider != null)
@@ -42,6 +61,13 @@ public class battleManeger : MonoBehaviour
             enemyHPSlider.maxValue = enemy.hp;
             enemyHPSlider.value = enemy.hp;
             enemyHPSlider.onValueChanged.AddListener((value) => OnSliderValueChanged(enemy, value));
+        }
+
+        if (playerMPSlider != null)
+        {
+            playerMPSlider.maxValue = player.hp;
+            playerMPSlider.value = player.hp;
+            playerMPSlider.onValueChanged.AddListener((value) => OnSliderValueChanged(player, value));
         }
 
         StartCoroutine(Battle());
@@ -113,39 +139,60 @@ public class battleManeger : MonoBehaviour
                 case Phase.ExecutePhase:
                     // 技の実行
                     player.selectCommand.Execute(player, player.target);
-                    enemy.selectCommand.Execute(enemy, enemy.target);
-
                     if (playerHPSlider != null) playerHPSlider.value = player.hp;
                     if (enemyHPSlider != null) enemyHPSlider.value = enemy.hp;
+
+                    UpdateUI();
 
                     // 結果の判定
                     if (player.hp <= 0 || enemy.hp <= 0)
                     {
                         phase = Phase.Result;
+                        break;
+                    }
+
+                    enemy.selectCommand.Execute(enemy, enemy.target);
+
+                    if (playerHPSlider != null) playerHPSlider.value = player.hp;
+                    if (enemyHPSlider != null) enemyHPSlider.value = enemy.hp;
+
+                    UpdateUI();
+
+                    if (player.hp <= 0 || enemy.hp <= 0)
+                    {
+                        phase = Phase.Result;
+                        break;
+                    }
+
+
+                    if (playerMPSlider != null) playerMPSlider.value = player.mp;
+
+                    if (targetUI != null)
+                    {
+                        targetUI.SetActive(true);
+                        Debug.Log($"{targetUI.name} を表示しました");
                     }
                     else
                     {
-                        if (targetUI != null)
-                        {
-                            targetUI.SetActive(true);
-                            Debug.Log($"{targetUI.name} を表示しました");
-                        }
-                        else
-                        {
-                            Debug.LogWarning("targetUI が設定されていません");
-                        }
-
-                        phase = Phase.ChooseCommandPhase;
+                        Debug.LogWarning("targetUI が設定されていません");
                     }
+                    
+                    phase = Phase.ChooseCommandPhase;
+                    
                     break;
 
                 case Phase.Result:
                     Debug.Log("バトル終了");
+                    player.money = 100;
+                    Debug.Log("お金GET");
+
+                    SavePlayerData();
+                    Debug.Log("データを保存");
+
                     phase = Phase.End;
                     break;
 
                 case Phase.End:
-
 
                     break;
             }
@@ -165,6 +212,27 @@ public class battleManeger : MonoBehaviour
         else
         {
             Debug.LogWarning("targetEndUI が設定されていません");
+        }
+    }
+
+    void UpdateUI()
+    {
+        hpText.text = player.hp.ToString();
+        mpText.text = player.mp.ToString();
+        attackText.text = player.attack.ToString();
+        defenseText.text = player.defense.ToString();
+        moneyText.text = player.money.ToString();
+    }
+
+    void SavePlayerData()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.hp = player.hp;
+            GameManager.Instance.mp = player.mp;
+            GameManager.Instance.attack = player.attack;
+            GameManager.Instance.defense = player.defense;
+            GameManager.Instance.playerMoney = player.money;
         }
     }
 }

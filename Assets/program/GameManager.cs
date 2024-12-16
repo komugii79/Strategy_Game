@@ -16,15 +16,16 @@ public class GameManager : MonoBehaviour
     // ステータスを表示するUI
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI mpText;
-    public TextMeshProUGUI attackText; 
+    public TextMeshProUGUI attackText;
     public TextMeshProUGUI defenseText;
-    public TextMeshProUGUI moneyText; 
+    public TextMeshProUGUI moneyText;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -71,11 +72,11 @@ public class GameManager : MonoBehaviour
 
     void UpdateUI()
     {
-        hpText.text = hp.ToString();
-        mpText.text = mp.ToString();
-        attackText.text = attack.ToString();
-        defenseText.text = defense.ToString();
-        moneyText.text = playerMoney.ToString();
+        if (hpText != null) hpText.text = hp.ToString();
+        if (mpText != null) mpText.text = mp.ToString();
+        if (attackText != null) attackText.text = attack.ToString();
+        if (defenseText != null) defenseText.text = defense.ToString();
+        if (moneyText != null) moneyText.text = playerMoney.ToString();
     }
 }
 

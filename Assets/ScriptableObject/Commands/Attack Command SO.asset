@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Attack Command SO
   m_EditorClassIdentifier: 
   name: "\u653B\u6483"
-  attack: 2
+  attack: 20
