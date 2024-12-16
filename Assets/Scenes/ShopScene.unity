@@ -2370,7 +2370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &559790361
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2432,8 +2432,8 @@ Transform:
   m_GameObject: {fileID: 559790360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3527, y: -0.0771, z: 0}
-  m_LocalScale: {x: 0.5201611, y: 0.52580196, z: 1}
+  m_LocalPosition: {x: 5.4212, y: -0.0771, z: 0}
+  m_LocalScale: {x: 0.5387308, y: 0.52580196, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1442642282}
@@ -2814,8 +2814,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Ruby Staff
-  cost: 100
-  statIncrease: 120
+  cost: 120
+  statIncrease: 100
   infoPanelController: {fileID: 572833076}
 --- !u!114 &855659599
 MonoBehaviour:
@@ -2830,9 +2830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Ruby Staff
-  cost: 100
+  cost: 120
   statType: "\u9B54\u529B"
-  statIncrease: 120
+  statIncrease: 100
   infoPanelController: {fileID: 572833076}
 --- !u!1 &899292965
 GameObject:
@@ -3466,7 +3466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -4}
+  m_AnchoredPosition: {x: 85, y: -4}
   m_SizeDelta: {x: 200, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233549303
@@ -4498,8 +4498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.4402, y: 25}
-  m_SizeDelta: {x: 210.8803, y: 50}
+  m_AnchoredPosition: {x: 348.75128, y: 25}
+  m_SizeDelta: {x: 217.5025, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489706197
 MonoBehaviour:
@@ -4584,7 +4584,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -5.1171875, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5094,8 +5094,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Sword
-  cost: 25
-  statIncrease: 30
+  cost: 30
+  statIncrease: 25
   infoPanelController: {fileID: 572833076}
 --- !u!114 &1738270249
 MonoBehaviour:
@@ -5110,9 +5110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Sword
-  cost: 25
+  cost: 30
   statType: "\u653B\u6483\u529B"
-  statIncrease: 30
+  statIncrease: 25
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1778479575
 GameObject:
@@ -5772,8 +5772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Staff
-  cost: 25
-  statIncrease: 30
+  cost: 30
+  statIncrease: 25
   infoPanelController: {fileID: 572833076}
 --- !u!114 &1942443579
 MonoBehaviour:
@@ -5788,9 +5788,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Staff
-  cost: 25
+  cost: 30
   statType: "\u9B54\u529B"
-  statIncrease: 30
+  statIncrease: 25
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1965801201
 GameObject:
@@ -5874,7 +5874,7 @@ Transform:
   m_GameObject: {fileID: 1965801201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.61091, y: -3.2, z: 0}
+  m_LocalPosition: {x: -6.4, y: -3.2, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6317,7 +6317,7 @@ Transform:
   m_GameObject: {fileID: 2031246078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: -3.3, z: 0}
+  m_LocalPosition: {x: -0.24, y: -3.3, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6448,8 +6448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Shield
-  cost: 25
-  statIncrease: 20
+  cost: 20
+  statIncrease: 25
   infoPanelController: {fileID: 572833076}
 --- !u!114 &2031246084
 MonoBehaviour:
@@ -6464,9 +6464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Shield
-  cost: 25
+  cost: 20
   statType: "\u9632\u5FA1\u529B"
-  statIncrease: 20
+  statIncrease: 25
   infoPanelController: {fileID: 572833076}
 --- !u!1 &2086099383
 GameObject:
@@ -6579,7 +6579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85, y: -4}
+  m_AnchoredPosition: {x: 90, y: -4}
   m_SizeDelta: {x: 200, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2089023225
