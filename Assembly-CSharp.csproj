@@ -75,10 +75,12 @@
     <Compile Include="Assets\character\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Commands\HealCommandSO.cs" />
+    <Compile Include="Assets\program\SpriteItem.cs" />
     <Compile Include="Assets\program\SelectableText.cs" />
     <Compile Include="Assets\character\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\program\ButtonOnClick.cs" />
     <Compile Include="Assets\program\ClickableItem.cs" />
+    <Compile Include="Assets\program\RaycastTargetDebugger.cs" />
     <Compile Include="Assets\program\Change_battlescene.cs" />
     <Compile Include="Assets\Commands\CommandSO.cs" />
   </ItemGroup>

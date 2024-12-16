@@ -263,8 +263,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278321666
+  m_fontColor: {r: 0.006289184, g: 0.006229852, b: 0.006229852, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 204838279}
   - component: {fileID: 204838278}
   - component: {fileID: 204838281}
+  - component: {fileID: 204838282}
   m_Layer: 0
   m_Name: Iron Sword
   m_TagString: Untagged
@@ -688,13 +689,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204838276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Iron Sword
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &204838282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204838276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Iron Sword
+  cost: 50
+  statType: "\u653B\u6483\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &205665506
@@ -1199,6 +1217,7 @@ GameObject:
   - component: {fileID: 304034696}
   - component: {fileID: 304034695}
   - component: {fileID: 304034698}
+  - component: {fileID: 304034699}
   m_Layer: 0
   m_Name: Sapphire Staff
   m_TagString: Untagged
@@ -1340,13 +1359,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304034693}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Sapphire Staff
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &304034699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304034693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Sapphire Staff
+  cost: 50
+  statType: "\u9B54\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &319594870
@@ -1699,7 +1735,7 @@ GameObject:
   - component: {fileID: 395883007}
   - component: {fileID: 395883009}
   m_Layer: 0
-  m_Name: backgroundImage
+  m_Name: background_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1881,7 +1917,6 @@ GameObject:
   - component: {fileID: 414328389}
   - component: {fileID: 414328388}
   - component: {fileID: 414328390}
-  - component: {fileID: 414328392}
   - component: {fileID: 414328391}
   m_Layer: 0
   m_Name: Golden Sword
@@ -2028,46 +2063,32 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414328385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Golden Sword
-  cost: 100
-  statIncrease: 120
+  cost: 120
+  statIncrease: 100
   infoPanelController: {fileID: 572833076}
---- !u!222 &414328391
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414328385}
-  m_CullTransparentMesh: 1
---- !u!223 &414328392
-Canvas:
+--- !u!114 &414328391
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414328385}
   m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Golden Sword
+  cost: 120
+  statType: "\u653B\u6483\u529B"
+  statIncrease: 100
+  infoPanelController: {fileID: 572833076}
 --- !u!1 &452212559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,6 +2354,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522530773}
   m_CullTransparentMesh: 1
+--- !u!1 &559790360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559790362}
+  - component: {fileID: 559790361}
+  m_Layer: 0
+  m_Name: hukidashi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &559790361
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559790360}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a67fb6ce4adb77b4685fefe4360d8fdd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 7.38, y: 5.51}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &559790362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559790360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.3527, y: -0.0771, z: 0}
+  m_LocalScale: {x: 0.5201611, y: 0.52580196, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1442642282}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572833075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2666,7 @@ GameObject:
   - component: {fileID: 855659597}
   - component: {fileID: 855659596}
   - component: {fileID: 855659598}
+  - component: {fileID: 855659599}
   m_Layer: 0
   m_Name: Ruby Staff
   m_TagString: Untagged
@@ -2701,13 +2808,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855659593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Ruby Staff
   cost: 100
+  statIncrease: 120
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &855659599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855659593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Ruby Staff
+  cost: 100
+  statType: "\u9B54\u529B"
   statIncrease: 120
   infoPanelController: {fileID: 572833076}
 --- !u!1 &899292965
@@ -2910,8 +3034,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2934,7 +3058,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3374,8 +3498,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294835709
+  m_fontColor: {r: 0.99371064, g: 0.99371064, b: 0.99371064, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3764,6 +3888,7 @@ GameObject:
   - component: {fileID: 1369261810}
   - component: {fileID: 1369261809}
   - component: {fileID: 1369261812}
+  - component: {fileID: 1369261813}
   m_Layer: 0
   m_Name: Green Potion 3
   m_TagString: Untagged
@@ -3780,7 +3905,7 @@ Transform:
   m_GameObject: {fileID: 1369261807}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9345446, y: -2.9, z: 0}
+  m_LocalPosition: {x: 5.9345446, y: -3.1, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3905,13 +4030,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369261807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Green Potion
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1369261813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369261807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Green Potion
+  cost: 50
+  statType: "\u4F53\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1386744803
@@ -3981,7 +4123,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1f2c7dc6e7e190145b6dc01c7d6613e4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0e52695f657501f419803c3e445ea89c, type: 2}
   m_sharedMaterial: {fileID: -8414114675906448355, guid: 1f2c7dc6e7e190145b6dc01c7d6613e4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4006,15 +4148,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4022,7 +4164,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4045,7 +4187,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1398160067
@@ -4184,6 +4326,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398160067}
   m_CullTransparentMesh: 1
+--- !u!1 &1442642281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442642282}
+  - component: {fileID: 1442642285}
+  - component: {fileID: 1442642284}
+  - component: {fileID: 1442642283}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1442642282
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442642281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1489706196}
+  m_Father: {fileID: 559790362}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1442642283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442642281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1442642284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442642281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1442642285
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442642281}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1470863382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,6 +4464,140 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1489706195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489706196}
+  - component: {fileID: 1489706198}
+  - component: {fileID: 1489706197}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1489706196
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489706195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1442642282}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 345.4402, y: 25}
+  m_SizeDelta: {x: 210.8803, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1489706197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489706195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u30A2\u30A4\u30C6\u30E0\u306B\u30AB\u30FC\u30BD\u30EB\u3092\u5408\u308F\u305B\u308B\u3068\u30B3\u30B9\u30C8\u3068\u30B9\u30C6\u30FC\u30BF\u30B9\u306E\u4E0A\u6607\u5E45\u304C\u308F\u304B\u308B!"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0e52695f657501f419803c3e445ea89c, type: 2}
+  m_sharedMaterial: {fileID: -8414114675906448355, guid: 0e52695f657501f419803c3e445ea89c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 23
+  m_fontSizeBase: 23
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1489706198
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489706195}
+  m_CullTransparentMesh: 1
 --- !u!1 &1508989146
 GameObject:
   m_ObjectHideFlags: 0
@@ -4517,7 +4895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1672715107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,7 +4903,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672715106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf29fbdd1b37ba84fb778736ff54a6fd, type: 3}
   m_Name: 
@@ -4568,6 +4946,7 @@ GameObject:
   - component: {fileID: 1738270246}
   - component: {fileID: 1738270245}
   - component: {fileID: 1738270248}
+  - component: {fileID: 1738270249}
   m_Layer: 0
   m_Name: Wooden Sword
   m_TagString: Untagged
@@ -4709,13 +5088,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738270243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Sword
   cost: 25
+  statIncrease: 30
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1738270249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738270243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wooden Sword
+  cost: 25
+  statType: "\u653B\u6483\u529B"
   statIncrease: 30
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1778479575
@@ -5228,6 +5624,7 @@ GameObject:
   - component: {fileID: 1942443576}
   - component: {fileID: 1942443575}
   - component: {fileID: 1942443578}
+  - component: {fileID: 1942443579}
   m_Layer: 0
   m_Name: Wooden Staff
   m_TagString: Untagged
@@ -5369,13 +5766,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942443573}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Staff
   cost: 25
+  statIncrease: 30
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1942443579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942443573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wooden Staff
+  cost: 25
+  statType: "\u9B54\u529B"
   statIncrease: 30
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1965801201
@@ -5391,6 +5805,7 @@ GameObject:
   - component: {fileID: 1965801205}
   - component: {fileID: 1965801204}
   - component: {fileID: 1965801206}
+  - component: {fileID: 1965801207}
   m_Layer: 0
   m_Name: Iron Shield
   m_TagString: Untagged
@@ -5459,7 +5874,7 @@ Transform:
   m_GameObject: {fileID: 1965801201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.61091, y: -3, z: 0}
+  m_LocalPosition: {x: -6.61091, y: -3.2, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5532,13 +5947,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965801201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Iron Shield
   cost: 50
+  statIncrease: 50
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &1965801207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965801201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Iron Shield
+  cost: 50
+  statType: "\u9632\u5FA1\u529B"
   statIncrease: 50
   infoPanelController: {fileID: 572833076}
 --- !u!1 &1989140903
@@ -5868,6 +6300,7 @@ GameObject:
   - component: {fileID: 2031246081}
   - component: {fileID: 2031246080}
   - component: {fileID: 2031246083}
+  - component: {fileID: 2031246084}
   m_Layer: 0
   m_Name: Wooden Shield
   m_TagString: Untagged
@@ -5884,7 +6317,7 @@ Transform:
   m_GameObject: {fileID: 2031246078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0957585, y: -3.1, z: 0}
+  m_LocalPosition: {x: -0.6, y: -3.3, z: 0}
   m_LocalScale: {x: 3.030303, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6009,13 +6442,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031246078}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f437cd3583cc14a9d3b85933031604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Wooden Shield
   cost: 25
+  statIncrease: 20
+  infoPanelController: {fileID: 572833076}
+--- !u!114 &2031246084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031246078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaebb03e69539634c85725892413747f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Wooden Shield
+  cost: 25
+  statType: "\u9632\u5FA1\u529B"
   statIncrease: 20
   infoPanelController: {fileID: 572833076}
 --- !u!1 &2086099383
@@ -6363,6 +6813,7 @@ SceneRoots:
   - {fileID: 1672715108}
   - {fileID: 1172597214}
   - {fileID: 1652176599}
+  - {fileID: 572833077}
   - {fileID: 159121727}
   - {fileID: 1129876979}
   - {fileID: 395883008}
@@ -6371,4 +6822,4 @@ SceneRoots:
   - {fileID: 1902293707}
   - {fileID: 1989140905}
   - {fileID: 146727107}
-  - {fileID: 572833077}
+  - {fileID: 559790362}
