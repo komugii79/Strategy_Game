@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,11 +27,28 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            AssignUIElements();
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        AssignUIElements();
+        UpdateUI();
     }
 
     private void Start()
@@ -68,6 +86,15 @@ public class GameManager : MonoBehaviour
     {
         playerMoney += amount;
         UpdateUI();
+    }
+
+    private void AssignUIElements()
+    {
+        hpText = GameObject.Find("HPText")?.GetComponent<TextMeshProUGUI>();
+        mpText = GameObject.Find("MPText")?.GetComponent<TextMeshProUGUI>();
+        attackText = GameObject.Find("ATKText")?.GetComponent<TextMeshProUGUI>();
+        defenseText = GameObject.Find("DEFText ")?.GetComponent<TextMeshProUGUI>();
+        moneyText = GameObject.Find("Money")?.GetComponent<TextMeshProUGUI>();
     }
 
     void UpdateUI()
