@@ -10,6 +10,7 @@ public class Battler : MonoBehaviour
     public int defense;
     public int attack;
     public int money;
+    public int block;
 
     public int player;
 
