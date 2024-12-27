@@ -116,9 +116,9 @@ public class battleManeger : MonoBehaviour
                     break;
 
                 case Phase.ExecutePhase:
-                    ExecuteCommands();
+                    yield return StartCoroutine(ExecuteCommandsWithDelay());
                     UpdateUI(); // UIÇïKÇ∏çXêVÇ∑ÇÈ
-                    //CheckBattleResult();
+                    CheckBattleResult();
                     break;
 
                 case Phase.Result:
@@ -138,23 +138,6 @@ public class battleManeger : MonoBehaviour
 
         enemy.selectCommand = enemy.commands[0];
         enemy.target = player;
-    }
-
-    private void ExecuteCommands()
-    {
-        StartCoroutine(ExecuteCommandsWithDelay());
-    }
-
-    private void CheckBattleResult()
-    {
-        if (player.hp <= 0 || enemy.hp <= 0)
-        {
-            phase = Phase.Result;
-        }
-        else
-        {
-            phase = Phase.ChooseCommandPhase;
-        }
     }
 
     private void EndBattle()
@@ -211,8 +194,18 @@ public class battleManeger : MonoBehaviour
         {
             player.block = 0;
         }
+    }
 
-        CheckBattleResult();
+    private void CheckBattleResult()
+    {
+        if (player.hp <= 0 || enemy.hp <= 0)
+        {
+            phase = Phase.Result;
+        }
+        else
+        {
+            phase = Phase.ChooseCommandPhase;
+        }
     }
 
 
