@@ -22,7 +22,7 @@ public class battleManeger : MonoBehaviour
     public TextMeshProUGUI moneyText;
 
     [SerializeField] private TextMeshProUGUI battleLogText;
-    private string battleLog = ""; // ログの内容を保持
+    //private string battleLog = ""; // ログの内容を保持
 
     private int playerCommandIndex = 0; // 技のインデックスを保持
 
@@ -47,6 +47,8 @@ public class battleManeger : MonoBehaviour
             player.defense = GameManager.Instance.defense;
             player.money = GameManager.Instance.playerMoney;
             player.block = 0;
+            enemy.hp = enemy.hp * GameManager.Instance.lap;
+            enemy.attack = enemy.attack * GameManager.Instance.lap;
         }
 
         UpdateUI();
@@ -109,7 +111,6 @@ public class battleManeger : MonoBehaviour
                     break;
 
                 case Phase.ChooseCommandPhase:
-                    player.block = 0;
                     yield return new WaitUntil(() => phase == Phase.ExecutePhase);
                     AssignCommands();
                     break;
@@ -117,7 +118,7 @@ public class battleManeger : MonoBehaviour
                 case Phase.ExecutePhase:
                     ExecuteCommands();
                     UpdateUI(); // UIを必ず更新する
-                    CheckBattleResult();
+                    //CheckBattleResult();
                     break;
 
                 case Phase.Result:
@@ -141,14 +142,7 @@ public class battleManeger : MonoBehaviour
 
     private void ExecuteCommands()
     {
-        player.selectCommand.Execute(player, player.target);
-        UpdateSliders(); // スライダーの値を更新
-
-        if (player.hp > 0 && enemy.hp > 0)
-        {
-            enemy.selectCommand.Execute(enemy, enemy.target);
-            UpdateSliders(); // スライダーの値を更新
-        }
+        StartCoroutine(ExecuteCommandsWithDelay());
     }
 
     private void CheckBattleResult()
@@ -192,11 +186,41 @@ public class battleManeger : MonoBehaviour
         if (playerMPSlider != null) playerMPSlider.value = Mathf.Clamp(player.mp, 0, playerMPSlider.maxValue);
     }
 
+    private IEnumerator ExecuteCommandsWithDelay()
+    {
+        // プレイヤーの攻撃を実行
+        player.selectCommand.Execute(player, player.target);
+        UpdateSliders(); // スライダーの値を更新
+
+        if (enemy.block == 1)
+        {
+            enemy.block = 0;
+        }
+
+        // 少し時間を空ける
+        yield return new WaitForSeconds(1f); // 1秒間の遅延
+
+        // 敵の攻撃を実行（プレイヤーがまだ生存している場合）
+        if (player.hp > 0 && enemy.hp > 0)
+        {
+            enemy.selectCommand.Execute(enemy, enemy.target);
+            UpdateSliders(); // スライダーの値を更新
+        }
+        
+        if (player.block == 1)
+        {
+            player.block = 0;
+        }
+
+        CheckBattleResult();
+    }
+
+
     public void UpdateBattleLog(string message)
     {
         if (targetBattleLog != null)
         {
-            targetBattleLog.SetActive(true); // ログを表示
+            targetBattleLog.SetActive(false); // ログを表示
         }
 
         if (battleLogText != null)
@@ -204,6 +228,10 @@ public class battleManeger : MonoBehaviour
             battleLogText.text = message; // ログを更新
         }
 
+        if (targetBattleLog != null)
+        {
+            targetBattleLog.SetActive(true); // ログを表示
+        }
         StartCoroutine(HideBattleLogAfterDelay(1f)); // 一定時間後にログを非表示（3秒後）
     }
 
@@ -232,6 +260,7 @@ public class battleManeger : MonoBehaviour
             GameManager.Instance.attack = player.attack;
             GameManager.Instance.defense = player.defense;
             GameManager.Instance.playerMoney = player.money;
+            GameManager.Instance.lap = GameManager.Instance.lap + 1;
         }
     }
 }

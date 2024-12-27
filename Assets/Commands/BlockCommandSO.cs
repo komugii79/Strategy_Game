@@ -9,5 +9,6 @@ public class BlockCommandplayer : CommandSO
     public override void Execute(Battler user, Battler target)
     {
         user.block = 1;
+        Debug.LogWarning($"{user}‚ÌƒuƒƒbƒN‚Í{user.block}");
     }
 }

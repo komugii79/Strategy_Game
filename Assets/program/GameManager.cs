@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int defense = 10;       // DEFの初期値
     public int playerMoney = 100; // 所持金
 
+    public int lap = 1;
+
     // ステータスを表示するUI
     public TextMeshProUGUI hpText;
     public TextMeshProUGUI mpText;
