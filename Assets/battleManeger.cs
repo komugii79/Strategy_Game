@@ -11,6 +11,10 @@ public class battleManeger : MonoBehaviour
     [SerializeField] private GameObject targetEndUI;
     [SerializeField] private GameObject targetBattleLog;
 
+    [SerializeField] private GameObject EnemyObject1;
+    [SerializeField] private GameObject EnemyObject2;
+    [SerializeField] private GameObject EnemyObject3;
+
     [SerializeField] private Slider playerHPSlider;
     [SerializeField] private Slider enemyHPSlider;
     [SerializeField] private Slider playerMPSlider;
@@ -23,6 +27,11 @@ public class battleManeger : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI battleLogText;
     //private string battleLog = ""; // ログの内容を保持
+
+    public TextMeshProUGUI player_damage;
+    public TextMeshProUGUI enemy_damage;
+
+    public TextMeshProUGUI enemy_name;
 
     private int playerCommandIndex = 0; // 技のインデックスを保持
 
@@ -49,6 +58,22 @@ public class battleManeger : MonoBehaviour
             player.block = 0;
             enemy.hp = enemy.hp * GameManager.Instance.lap;
             enemy.attack = enemy.attack * GameManager.Instance.lap;
+        }
+
+        if (enemy_name != null)
+        {
+            int lapM = GameManager.Instance.lap % 3;
+            enemy.name = lapM switch
+            {
+                1 => "Mummy",
+                2 => "Mummy2",
+                _ => "Mummy3"
+            };
+            enemy_name.text = enemy.name;
+
+            EnemyObject1.SetActive(lapM == 1);
+            EnemyObject2.SetActive(lapM == 2);
+            EnemyObject3.SetActive(lapM == 0);
         }
 
         UpdateUI();
@@ -213,7 +238,7 @@ public class battleManeger : MonoBehaviour
     {
         if (targetBattleLog != null)
         {
-            targetBattleLog.SetActive(false); // ログを表示
+            targetBattleLog.SetActive(false); // ログを非表示
         }
 
         if (battleLogText != null)
@@ -226,6 +251,35 @@ public class battleManeger : MonoBehaviour
             targetBattleLog.SetActive(true); // ログを表示
         }
         StartCoroutine(HideBattleLogAfterDelay(1f)); // 一定時間後にログを非表示（3秒後）
+    }
+
+    public void UpdatePlayerDamageLog(string message)
+    {
+        if (player_damage != null)
+        {
+            player_damage.text = message; // テキストを更新
+            player_damage.gameObject.SetActive(true); // UIをアクティブ化
+            StartCoroutine(HideDamageLogAfterDelay(player_damage, 1f)); // 非表示を遅延実行
+        }
+    }
+
+    public void UpdateEnemyDamageLog(string message)
+    {
+        if (enemy_damage != null)
+        {
+            enemy_damage.text = message; // テキストを更新
+            enemy_damage.gameObject.SetActive(true); // UIをアクティブ化
+            StartCoroutine(HideDamageLogAfterDelay(enemy_damage, 1f)); // 非表示を遅延実行
+        }
+    }
+
+    private IEnumerator HideDamageLogAfterDelay(TextMeshProUGUI damageText, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (damageText != null)
+        {
+            damageText.gameObject.SetActive(false); // 遅延後に非表示
+        }
     }
 
     private IEnumerator HideBattleLogAfterDelay(float delay)

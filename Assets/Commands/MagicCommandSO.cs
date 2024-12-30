@@ -17,6 +17,14 @@ public class HealCommandSO : CommandSO
         if (battleManager != null)
         {
             battleManager.UpdateBattleLog($"{user.name}の魔法: {target.name}に{damage}のダメージ! 残りのHP: {target.hp}");
+            if (user.player == 1)
+            {
+                battleManager.UpdateEnemyDamageLog($"{-damage}");
+            }
+            else
+            {
+                battleManager.UpdatePlayerDamageLog($"{-damage}");
+            }
         }
         else
         {
