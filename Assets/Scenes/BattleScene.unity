@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8683637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -720,6 +720,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &127808573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127808574}
+  m_Layer: 0
+  m_Name: Enemy1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &127808574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127808573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 522, y: 555.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 945523108}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141293710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1118,7 @@ GameObject:
   - component: {fileID: 188074289}
   - component: {fileID: 188074290}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: enemyStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,7 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2696156beba813045b3287b8fa625317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Munny
+  name: 
   hp: 50
   mp: 0
   defense: 0
@@ -2943,6 +2975,9 @@ MonoBehaviour:
   targetUI: {fileID: 1103141002}
   targetEndUI: {fileID: 582288149}
   targetBattleLog: {fileID: 533555003}
+  EnemyObject1: {fileID: 127808573}
+  EnemyObject2: {fileID: 1468037747}
+  EnemyObject3: {fileID: 1445692830}
   playerHPSlider: {fileID: 1753874661}
   enemyHPSlider: {fileID: 2004486135}
   playerMPSlider: {fileID: 1116013713}
@@ -2952,6 +2987,9 @@ MonoBehaviour:
   defenseText: {fileID: 299833470}
   moneyText: {fileID: 1277114460}
   battleLogText: {fileID: 1993861928}
+  player_damage: {fileID: 1147573336}
+  enemy_damage: {fileID: 8683638}
+  enemy_name: {fileID: 1807076180}
 --- !u!4 &513782334
 Transform:
   m_ObjectHideFlags: 0
@@ -5192,12 +5230,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945523106}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.31, y: -2.6, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -516.69, y: -558.1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 127808574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &945523109
 Animator:
@@ -6400,7 +6438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1147573335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7388,6 +7426,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439454871}
   m_CullTransparentMesh: 1
+--- !u!1 &1445692830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1445692831}
+  m_Layer: 0
+  m_Name: Enemy3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1445692831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445692830}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 522, y: 555.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448170737
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,6 +7591,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448170737}
   m_CullTransparentMesh: 1
+--- !u!1 &1468037747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468037748}
+  m_Layer: 0
+  m_Name: Enemy2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1468037748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468037747}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 522, y: 555.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505312547
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,7 +8388,7 @@ GameObject:
   - component: {fileID: 1807076181}
   - component: {fileID: 1807076180}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: EnemyName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8333,7 +8433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mummy
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9351,8 +9451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 870, y: 2760}
-  m_SizeDelta: {x: 600, y: 50}
+  m_AnchoredPosition: {x: 840, y: 2760}
+  m_SizeDelta: {x: 550, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993861928
 MonoBehaviour:
@@ -9374,10 +9474,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: "Player\u306E\u653B\u6483: Mummy\u306B10\u306E\u30C0\u30E1\u30FC\u30B8!
+    \u6B8B\u308A\u306EHP: 90"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6ec3f240ab732d24a9fa826b9070b1e7, type: 2}
+  m_sharedMaterial: {fileID: 5468297319125130179, guid: 6ec3f240ab732d24a9fa826b9070b1e7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10048,7 +10149,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 792788518}
-  - {fileID: 945523108}
   - {fileID: 2061831195}
   - {fileID: 1029452066}
   - {fileID: 1973284813}
@@ -10060,3 +10160,6 @@ SceneRoots:
   - {fileID: 1439148550}
   - {fileID: 735650182}
   - {fileID: 708313858}
+  - {fileID: 127808574}
+  - {fileID: 1468037748}
+  - {fileID: 1445692831}
