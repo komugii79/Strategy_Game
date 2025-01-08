@@ -9595,7 +9595,7 @@ MonoBehaviour:
   m_text: "Player\u306E\u653B\u6483: Mummy\u306B10\u306E\u30C0\u30E1\u30FC\u30B8!
     \u6B8B\u308A\u306EHP: 90"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e52695f657501f419803c3e445ea89c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 96a0a7c88c78ca84bb84677bdf633811, type: 2}
   m_sharedMaterial: {fileID: -8414114675906448355, guid: 0e52695f657501f419803c3e445ea89c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9659,7 +9659,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1993861929

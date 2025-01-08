@@ -66,9 +66,9 @@ public class battleManeger : MonoBehaviour
             int lapM = GameManager.Instance.lap % 3;
             enemy.name = lapM switch
             {
-                1 => "Mummy",
-                2 => "Mummy2",
-                _ => "Mummy3"
+                1 => "DemonDog",
+                2 => "ZombKnight",
+                _ => "Dark"
             };
             enemy_name.text = enemy.name;
 
