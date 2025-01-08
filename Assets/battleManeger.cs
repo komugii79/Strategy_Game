@@ -10,6 +10,7 @@ public class battleManeger : MonoBehaviour
     [SerializeField] private GameObject targetUI;
     [SerializeField] private GameObject targetEndUI;
     [SerializeField] private GameObject targetBattleLog;
+    [SerializeField] private GameObject targetStartUI;
 
     [SerializeField] private GameObject EnemyObject1;
     [SerializeField] private GameObject EnemyObject2;
@@ -167,13 +168,38 @@ public class battleManeger : MonoBehaviour
 
     private void EndBattle()
     {
+        if(enemy.hp <= 0)
+        {
+            player.money += 100;
+            player.hp = 100;
+            SavePlayerData();
+            phase = Phase.End;
+
+            targetUI?.SetActive(false);
+            targetEndUI?.SetActive(true);
+        }
+        else
+        {
+            phase = Phase.End;
+
+            player.hp = 100;
+            player.money = 100;
+            player.attack = 10;
+            player.block = 10;
+            player.mp = 100;
+            SavePlayerData();
+
+            targetUI?.SetActive(false);
+            targetStartUI?.SetActive(true);
+        }
+        /*
         player.money += 100; // 仮の報酬
         player.hp = 100;
         SavePlayerData();
         phase = Phase.End;
 
         targetUI?.SetActive(false);
-        targetEndUI?.SetActive(true);
+        targetEndUI?.SetActive(true);*/
     }
 
     void UpdateUI()
@@ -241,6 +267,7 @@ public class battleManeger : MonoBehaviour
             targetBattleLog.SetActive(false); // ログを非表示
         }
 
+
         if (battleLogText != null)
         {
             battleLogText.text = message; // ログを更新
@@ -251,6 +278,25 @@ public class battleManeger : MonoBehaviour
             targetBattleLog.SetActive(true); // ログを表示
         }
         StartCoroutine(HideBattleLogAfterDelay(1f)); // 一定時間後にログを非表示（3秒後）
+    }
+
+    public void GameOverLog()
+    {
+        if (targetBattleLog != null)
+        {
+            targetBattleLog.SetActive(false); // ログを非表示
+        }
+
+
+        if (battleLogText != null)
+        {
+            battleLogText.text = "Game Over"; // ログを更新
+        }
+
+        if (targetBattleLog != null)
+        {
+            targetBattleLog.SetActive(true); // ログを表示
+        }
     }
 
     public void UpdatePlayerDamageLog(string message)
