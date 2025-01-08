@@ -82,6 +82,7 @@
     <Compile Include="Assets\program\ButtonOnClick.cs" />
     <Compile Include="Assets\program\ClickableItem.cs" />
     <Compile Include="Assets\program\RaycastTargetDebugger.cs" />
+    <Compile Include="Assets\program\BGMManager.cs" />
     <Compile Include="Assets\program\Change_battlescene.cs" />
     <Compile Include="Assets\Commands\CommandSO.cs" />
   </ItemGroup>
